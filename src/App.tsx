@@ -22,14 +22,14 @@ function App() {
 
 						
 						{currentLoading  ? <LoadingSkeletonCard/> : <NowCard currentWeather={currentData}/>}
-						{forecastLoading ? <LoadingSkeletonCard/> : <ForecastCard />}
+						{forecastLoading ? <LoadingSkeletonCard/> : <ForecastCard forecast={forecastData}/>}
 					</div>
 
 					<div className="content-right">
 						{qualityLoading && currentLoading 
 							? <MainSkeletonCard />
 							: currentData && qualityData
-							? <MainCard />
+							? <MainCard currentWeather={currentData} airQuality={qualityData}/>
 							: <MainSkeletonCard />
 						}
 					</div>
