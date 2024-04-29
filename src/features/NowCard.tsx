@@ -4,10 +4,11 @@ import LoadingSkeletonCard from '../components/loadingSkeletonCard'
 
 type Props = {
     currentWeather:Currentweather | null
+    title:string
 }
 
 const NowCard = (props: Props) => {
-    const {currentWeather} = props
+    const {currentWeather, title} = props
 
     
     if(currentWeather){
@@ -17,7 +18,7 @@ const NowCard = (props: Props) => {
             aria-label="current"
         >
             <div className="card card-lg current-weather-card">
-                <h2 className="title-2 card-title">Now</h2>
+                <h2 className="title-2 card-title">{title}</h2>
                 <div className="weapper">
                     <p className="heading"> {`${currentWeather?.main.temp}`}&deg;<sup>c</sup> </p>
                     <img src={`./assets/images/weather_icons/${currentWeather?.weather[0]?.icon}.png`} width="64" height="64" alt="overcast clouds" className="weather-icon" />

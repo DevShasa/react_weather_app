@@ -5,11 +5,12 @@ import { Forecast } from '../utils/definitions'
 import { monthNames, weekDayNames } from '../utils/dateUtils'
 
 type Props = {
-  forecast:Forecast | null
+  forecast:Forecast | null,
+  title:string
 }
 
 const ForecastCard = (props: Props) => {
-  const {forecast} = props
+  const {forecast, title} = props
   
 
 
@@ -25,7 +26,7 @@ const ForecastCard = (props: Props) => {
     return (
         <section className="section forecast" aria-labelledby="forecast" >
           <h2 className="title2" id="forecast-label">
-              5 Days Forecast
+              {title}
           </h2>
           <div className="card card-lg forecast-card">
               <ul>
