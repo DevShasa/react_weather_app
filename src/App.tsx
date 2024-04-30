@@ -9,6 +9,7 @@ import MainSkeletonCard from "./components/mainSkeletonContainer";
 import { LocaleContext } from "./context/LocaleContext";
 import { useContext } from "react";
 import { Languages } from "./utils/languages";
+import ErrorCard from "./components/errorCard";
 
 function App() {
 
@@ -26,22 +27,21 @@ function App() {
 						<button onClick={changeLocation} className="toggleButton">
 							Switch Language to {locale === "en" ?"Kiswahili" :"English"}
 						</button>
-						{currentLoading ? (
-							<LoadingSkeletonCard />
-						) : (
-							<NowCard
-								currentWeather={currentData}
-								title={Languages[locale].currentTitle}
-							/>
-						)}
-						{forecastLoading ? (
-							<LoadingSkeletonCard />
-						) : (
-							<ForecastCard
-								forecast={forecastData}
-								title={Languages[locale].forecast}
-							/>
-						)}
+
+						{currentLoading && !currentError
+							? <LoadingSkeletonCard />
+							: currentError
+							? <ErrorCard />
+							: <NowCard currentWeather={currentData} title={Languages[locale].currentTitle} />
+						}						
+
+						{forecastLoading && !forecastError
+							? <LoadingSkeletonCard />
+							: forecastError
+							? <ErrorCard />
+							:<ForecastCard forecast={forecastData} title={Languages[locale].forecast} />
+						}
+
 					</div>
 
 					<div className="content-right">

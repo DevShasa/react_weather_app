@@ -10,6 +10,7 @@ type Props = {
 const NowCard = (props: Props) => {
     const {currentWeather, title} = props
 
+    // console.log(currentWeather)
     
     if(currentWeather){
         return (
@@ -21,7 +22,7 @@ const NowCard = (props: Props) => {
                 <h2 className="title-2 card-title">{title}</h2>
                 <div className="weapper">
                     <p className="heading"> {`${currentWeather?.main.temp}`}&deg;<sup>c</sup> </p>
-                    <img src={`./assets/images/weather_icons/${currentWeather?.weather[0]?.icon}.png`} width="64" height="64" alt="overcast clouds" className="weather-icon" />
+                    <img src={`./assets/images/weather_icons/${currentWeather?.weather[0]?.icon}.png`} width="64" height="64" alt={currentWeather?.weather[0]?.description} className="weather-icon" />
                 </div>
                 <p className="body-3">{currentWeather?.weather[0]?.description}</p>
                 <ul className="meta-list">

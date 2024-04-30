@@ -35,6 +35,7 @@ const ForecastCard = (props: Props) => {
                   const date = new Date(dt_txt)
                   
                   return <ForecastLine 
+                    key={`${weekDayNames[date.getUTCDay()]} ${index}`}
                     temperature={Math.floor(temp_max- 273.15)} // convert kelvin to celcius
                     iconName={weather[0]?.icon}
                     date={`${date.getDate()} ${monthNames[date.getUTCMonth()]}`}

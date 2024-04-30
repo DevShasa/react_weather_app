@@ -10,7 +10,7 @@ type Props = {
 const ForecastLine = (props: Props) => {
     const {iconName, temperature, date, day} = props
   return (
-    <li className="card-item">
+    <li className="card-item" data-testid="forecast-line">
     <div className="icon-wrapper">
         <img
             src={`./assets/images/weather_icons/${iconName}.png`}
