@@ -1,4 +1,4 @@
-## Weather ap for Fuzu asessment
+## Weather app for Fuzu asessment
 
 ![homepage](weather_app.png)
 The wesite is powered by openweater api, to run the api simplu clone the repository and run  `npm ci` then `npm start`
