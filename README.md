@@ -10,7 +10,8 @@
 ![homepage](weather_app.png)
 The website is powered by openweather api, to run the api simply clone the repository and run  `npm ci` then `npm start.
 
-The app makes three api calls to populate the page, one for current weather, one for air quality and one for the forecast. Loading indicators are used to indicate when the page is fetching data. 
+The app makes three api calls to populate the page, one for current weather, one for air quality and one for the forecast. 
+Loading indicators are used to indicate when the page is fetching data. 
 
 ## Directory structure
 ![homepage](directory.png)
