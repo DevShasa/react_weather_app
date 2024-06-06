@@ -15,7 +15,7 @@ The app makes three api calls to populate the page, one for current weather, one
 ## Directory structure
 ![homepage](directory.png)
 
-components is where the reusable ui goes, features are for major sections of the webpage, reusable functional code that is not jsx goes into utils. I decided to go with plain css for styling as it is simple and effective  
+components is where the reusable ui goes, features are for major sections of the webpage, reusable functional code that is not jsx goes into utils. I decided to go with plain css for styling as it is simple and effective.
 
 ## Tests
 to run the unit tests, type `npm run test`
