@@ -25,7 +25,7 @@ function App() {
 				<article className="container">
 					<div className="content-left">
 						<button onClick={changeLocation} className="toggleButton">
-							Switch {locale === "en" ?"Kiswahili" :"English"}
+							Switch to {locale === "en" ?"Kiswahili" :"English"}
 						</button>
 
 						{currentLoading && !currentError
